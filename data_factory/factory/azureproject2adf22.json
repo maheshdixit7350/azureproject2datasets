@@ -1,0 +1,15 @@
+{
+	"name": "azureproject2adf22",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0de5b258-1b1a-4a40-b4e7-e07bb75dfb12",
+		"tenantId": "3f2e4c18-aa03-4ba9-b283-253ec912e0eb"
+	}
+}
