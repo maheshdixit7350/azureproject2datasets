@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "FileServerReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "C:\\Users\\Mahesh\\Desktop\\dataset2",
+							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
