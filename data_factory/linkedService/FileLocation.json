@@ -1,0 +1,17 @@
+{
+	"name": "FileLocation",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\Mahesh\\Desktop\\dataset2",
+			"userId": "mahesh",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3OTQ3YTc2OC02MTUyLTRkNTEtYjg0MS0wYzE3OWZlZDQ1MmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "onpremeproject2IR2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
