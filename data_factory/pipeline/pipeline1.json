@@ -61,6 +61,62 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "success",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-16.northcentralus.logic.azure.com:443/workflows/b833fa856ebb4436b97c1beb114ae709/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=92wSRGLpdZsXmGPXzSDTvumBT_gFMR-qH8gmGtqJLvE",
+					"body": {
+						"value": "{\r\n  \"pipelinename\": \"@{pipeline().Pipeline}\",\r\n  \"status\":\"success\",\r\n  \"runid\": \"@{pipeline().RunId}\",\r\n  \"time\":\"@{utcNow()}\"\r\n\r\n}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "failed",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-16.northcentralus.logic.azure.com:443/workflows/b833fa856ebb4436b97c1beb114ae709/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=92wSRGLpdZsXmGPXzSDTvumBT_gFMR-qH8gmGtqJLvE",
+					"body": {
+						"value": "{\n  \"pipelinename\": \"@{pipeline().Pipeline}\",\n  \"status\":\"fail\",\n  \"runid\": \"@{pipeline().RunId}\",\n  \"time\":\"@{utcNow()}\"\n\n}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
