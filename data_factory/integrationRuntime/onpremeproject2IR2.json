@@ -1,0 +1,12 @@
+{
+	"name": "onpremeproject2IR2",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/6142b80e-ae96-43eb-b96b-145975ea6a9a/resourcegroups/azureproject1resource/providers/Microsoft.DataFactory/factories/azureproject1adf11/integrationruntimes/onPremisesAzureIntegrationRuntime",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
